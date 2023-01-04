@@ -1,0 +1,7 @@
+{
+    "id": "<METRIC>",
+    "timeAggregation": "<TIME_AGG>",
+    "groupAggregation": "<GROUP_AGG>",
+    "descriptor": null,
+    "sorting": null
+}

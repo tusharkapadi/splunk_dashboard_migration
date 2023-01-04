@@ -1,0 +1,2131 @@
+{
+    "id": 51368,
+    "teamId": 10004196,
+    "userId": 10008183,
+    "name": "Whats New - 12/15/22",
+    "panels": [
+        {
+            "id": 3,
+            "type": "advancedTimechart",
+            "name": "Stacked Bar\n",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "advancedQueries": [
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_begin{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "Begin",
+                        "type": "stackedBar"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                },
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_success{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "success",
+                        "type": "stackedBar"
+                    },
+                    "format": {
+                        "unit": "%",
+                        "inputFormat": "0-100",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                }
+            ],
+            "legendConfiguration": {
+                "enabled": false,
+                "position": "right",
+                "layout": "table",
+                "showCurrent": true,
+                "width": null,
+                "height": null
+            },
+            "axesConfiguration": {
+                "bottom": {
+                    "enabled": true
+                },
+                "left": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                },
+                "right": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                }
+            }
+        },
+        {
+            "id": 2,
+            "type": "advancedTimechart",
+            "name": "Stacked Area\n",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "advancedQueries": [
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_begin{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "Total Requests",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                },
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_success{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "Unique Requests",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                }
+            ],
+            "legendConfiguration": {
+                "enabled": false,
+                "position": "right",
+                "layout": "table",
+                "showCurrent": true,
+                "width": null,
+                "height": null
+            },
+            "axesConfiguration": {
+                "bottom": {
+                    "enabled": true
+                },
+                "left": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                },
+                "right": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                }
+            }
+        },
+        {
+            "id": 1,
+            "type": "advancedTable",
+            "name": "PromQL in Table\n",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": [
+                {
+                    "type": "url",
+                    "title": "Show cluster",
+                    "url": "https://example.com/?query={{kube_cluster_name}}"
+                }
+            ],
+            "advancedQueries": [
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_begin{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "Begin",
+                        "timeSeriesDisplayNameTemplate": "Begin",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "1",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                },
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_success{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "Success",
+                        "timeSeriesDisplayNameTemplate": "success",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "1",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                },
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_begin{environment=\"prd\",requestor=\"ads-brand\"}[$__interval])) - sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_success{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "Beging - Success",
+                        "timeSeriesDisplayNameTemplate": "Begin",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "type": "advancedToplist",
+            "name": "PromQL in Toplist\n",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "advancedQueries": [
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_begin{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "Begin",
+                        "timeSeriesDisplayNameTemplate": "Begin",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "1",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                },
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_success{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "Success",
+                        "timeSeriesDisplayNameTemplate": "success",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "1",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                },
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_begin{environment=\"prd\",requestor=\"ads-brand\"}[$__interval])) - sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_success{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "Beging - Success",
+                        "timeSeriesDisplayNameTemplate": "Begin",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "type": "text",
+            "name": "Scope",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### $__scope\n\n- It is a scope variable in a PromQL dashboard that helps user to apply dashboard scope to the PromQL queries easily.\n- So a query previously defined as\n\n      avg(ads_brand_rtb_hb_bidresponse_count{environment=~$env,gameid=~$gameID,DSPID=~$dspID,seatID=~$seatID,medServer=~$mediation,deploy=~$deploy})\n\nCan be simplified to\n\n           avg(ads_brand_rtb_hb_bidresponse_count{$__scope})\n\n- Please note that $__scope will pass the entirety of your dashboard scope to the metric, so it doesn't fit use cases where you want to use dashboard scope selectively.\n\n- **More Info -** https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#scope-variable-in-promql-dashboard",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 9,
+            "type": "advancedTimechart",
+            "name": "Scope",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "advancedQueries": [
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_begin{cluster_name =~ $cluster_name, environment  =~ $env, requestor  =~ $requestor}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "Begin",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                },
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_success{$__scope}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "Success",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                }
+            ],
+            "legendConfiguration": {
+                "enabled": false,
+                "position": "bottom",
+                "layout": "inline",
+                "showCurrent": true,
+                "width": null,
+                "height": null
+            },
+            "axesConfiguration": {
+                "bottom": {
+                    "enabled": true
+                },
+                "left": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                },
+                "right": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                }
+            }
+        },
+        {
+            "id": 11,
+            "type": "text",
+            "name": "Snap to the nearest TS & Contextual Tooltip",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Snap to the nearest TS & Contextual Tooltip\n\n- Hover Over anywhere in the timeseries panel and Sysdig will snap it to the nearest TS.\n- Sysdig displays all the segments as contextual tooltip to help you fitler TS easily.\n\n**More Info -**\nhttps://docs.sysdig.com/en/docs/release-notes/saas-sysdig-monitor-release-notes/#contextual-tooltip",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 10,
+            "type": "advancedTimechart",
+            "name": "Snap to the nearest TS & Contextual Tooltip",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "advancedQueries": [
+                {
+                    "query": "avg(ads_track_cpu_goroutines{environment=\"prd\"}) by (host)",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "",
+                        "type": "lines"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                }
+            ],
+            "legendConfiguration": {
+                "enabled": false,
+                "position": "right",
+                "layout": "table",
+                "showCurrent": true,
+                "width": null,
+                "height": null
+            },
+            "axesConfiguration": {
+                "bottom": {
+                    "enabled": true
+                },
+                "left": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                },
+                "right": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                }
+            }
+        },
+        {
+            "id": 13,
+            "type": "text",
+            "name": "New Panel",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Stacked Area and Stacked Bar\n\n- It is a way to visualize the data in Timeseries Panel.\n- Stacked Area or Stacked Bar helps to visualize how each metric or category contributes to the cumulative total.\n  - \u2b50\ufe0f**Tip:** **Use Stacked Bar to visualize sparse data \n- **More Info -** https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/visualisation-types/timechart/ ",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 15,
+            "type": "text",
+            "name": "PromQL in Table & Toplist Panel",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### PromQL in Table & Toplist Panel\n\n- Sysdig supports PromQL in table and toplist panels. \n- It includes all PromQL Operators, Functions, etc.\n\n- **More Info -** \n  - table - https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/visualisation-types/table/#view-resource-utilization-of-your-kubernetes-workload-using-a-promql-table-panel\n  - toplist - https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/visualisation-types/toplist/",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 17,
+            "type": "advancedTimechart",
+            "name": "Sparse Data using Stacked Area or Stacked Bar\n",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "advancedQueries": [
+                {
+                    "query": "sum(sum(mz_cqs_v2_reviewer_reviewer_sync_app_review_begin))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "Begin",
+                        "type": "stackedBar"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                },
+                {
+                    "query": "sum(sum(mz_cqs_v2_reviewer_reviewer_sync_app_review_exit))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "Exit",
+                        "type": "stackedBar"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                }
+            ],
+            "legendConfiguration": {
+                "enabled": false,
+                "position": "right",
+                "layout": "table",
+                "showCurrent": true,
+                "width": null,
+                "height": null
+            },
+            "axesConfiguration": {
+                "bottom": {
+                    "enabled": true
+                },
+                "left": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                },
+                "right": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "type": "advancedTimechart",
+            "name": "Sparse Data (Not using Stacked Area or Stacked Bar)",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "advancedQueries": [
+                {
+                    "query": "sum(sum(mz_cqs_v2_reviewer_reviewer_sync_app_review_begin))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "Begin",
+                        "type": "lines"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                },
+                {
+                    "query": "sum(sum(mz_cqs_v2_reviewer_reviewer_sync_app_review_exit))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "Exit",
+                        "type": "lines"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                }
+            ],
+            "legendConfiguration": {
+                "enabled": false,
+                "position": "right",
+                "layout": "table",
+                "showCurrent": true,
+                "width": null,
+                "height": null
+            },
+            "axesConfiguration": {
+                "bottom": {
+                    "enabled": true
+                },
+                "left": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                },
+                "right": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                }
+            }
+        },
+        {
+            "id": 18,
+            "type": "text",
+            "name": "$__interval_sec & $__range_sec",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### $__interval_sec & $__range_sec\n$__interval_sec\n- Same as $__interval but this variable will be replaced with an absolute value in seconds\n- useful to use as rate for gauge metric type\n\n$__range_sec\n- Same as $__range but this variable will be replaced with an absolute value in seconds\n- useful to use as rate for gauge metric type\n\n- **More Info -** https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/using-promql/#built-in-variables",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 20,
+            "type": "basicTimechart",
+            "name": "Translate Form-Query to PromQL",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "basicQueries": [
+                {
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "",
+                        "type": "lines"
+                    },
+                    "format": {
+                        "unit": "numberRate",
+                        "inputFormat": "/s",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "scope": {
+                        "expressions": [
+                            {
+                                "operand": "environment",
+                                "operator": "in",
+                                "displayName": "",
+                                "value": [
+                                    "prd"
+                                ],
+                                "descriptor": {
+                                    "documentId": "environment",
+                                    "id": "environment",
+                                    "metricType": "tag",
+                                    "type": "string",
+                                    "scale": 0.0,
+                                    "name": "environment",
+                                    "description": "environment",
+                                    "namespaces": [
+                                        "cloudProvider",
+                                        "host.container",
+                                        "ecs",
+                                        "host.fs",
+                                        "host.file",
+                                        "host",
+                                        "kubernetes",
+                                        "kubernetes.cluster",
+                                        "kubernetes.daemonSet",
+                                        "kubernetes.deployment",
+                                        "kubernetes.job",
+                                        "kubernetes.namespace",
+                                        "kubernetes.node",
+                                        "kubernetes.pod",
+                                        "kubernetes.replicaSet",
+                                        "kubernetes.service",
+                                        "kubernetes.statefulSet",
+                                        "kubernetes.resourcequota",
+                                        "kubernetes.hpa",
+                                        "link",
+                                        "mesos",
+                                        "host.net",
+                                        "host.process",
+                                        "prometheus",
+                                        "swarm",
+                                        "prombeacon"
+                                    ],
+                                    "scopes": [],
+                                    "timeAggregations": [
+                                        "concat",
+                                        "distinct",
+                                        "count"
+                                    ],
+                                    "groupAggregations": [
+                                        "concat",
+                                        "distinct",
+                                        "count"
+                                    ],
+                                    "aggregationForGroup": "none",
+                                    "hidden": false,
+                                    "experimental": false,
+                                    "deferred": false,
+                                    "identity": false,
+                                    "canMonitor": false,
+                                    "canGroupBy": false,
+                                    "canFilter": true,
+                                    "generatedFrom": "com.draios.model.metrics.custom.CustomMetric$Tag",
+                                    "publicId": "environment",
+                                    "segment": false,
+                                    "heuristic": false,
+                                    "documentType": "metric",
+                                    "documentTimestamp": 1672769478727
+                                },
+                                "variable": false,
+                                "isVariable": false
+                            }
+                        ],
+                        "extendsDashboardScope": true
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    },
+                    "metrics": [
+                        {
+                            "id": "ads_brand_rtb_http_request_total",
+                            "timeAggregation": "timeAvg",
+                            "groupAggregation": "sum",
+                            "descriptor": {
+                                "documentId": "prombeacon.ads_brand_rtb_http_request_total",
+                                "id": "ads_brand_rtb_http_request_total",
+                                "metricType": "counter",
+                                "counterType": "delta",
+                                "type": "number",
+                                "scale": 1.0,
+                                "name": "ads_brand_rtb_http_request_total",
+                                "description": "",
+                                "category": "prometheus_non_compliant",
+                                "namespaces": [
+                                    "prombeacon"
+                                ],
+                                "scopes": [],
+                                "timeAggregations": [
+                                    "timeAvg",
+                                    "avg",
+                                    "sum",
+                                    "min",
+                                    "max",
+                                    "rateOfChange"
+                                ],
+                                "groupAggregations": [
+                                    "sum",
+                                    "avg",
+                                    "min",
+                                    "max"
+                                ],
+                                "aggregationForGroup": "avg",
+                                "lastSeen": 1672735793000,
+                                "hidden": false,
+                                "experimental": false,
+                                "deferred": false,
+                                "identity": false,
+                                "canMonitor": false,
+                                "canGroupBy": false,
+                                "canFilter": false,
+                                "generatedFrom": "com.draios.model.metrics.custom.GenericMeerkatMetric",
+                                "publicId": "ads_brand_rtb_http_request_total",
+                                "legacyId": "ads_brand_rtb_http_request_total",
+                                "segment": false,
+                                "heuristic": false,
+                                "documentType": "metric",
+                                "documentTimestamp": 1672769478727
+                            },
+                            "sorting": null
+                        }
+                    ],
+                    "displayedValue": null,
+                    "segmentation": {
+                        "labels": [
+                            {
+                                "id": "deploy",
+                                "descriptor": {
+                                    "documentId": "deploy",
+                                    "id": "deploy",
+                                    "metricType": "tag",
+                                    "type": "string",
+                                    "scale": 0.0,
+                                    "name": "deploy",
+                                    "description": "deploy",
+                                    "namespaces": [
+                                        "cloudProvider",
+                                        "host.container",
+                                        "ecs",
+                                        "host.fs",
+                                        "host.file",
+                                        "host",
+                                        "kubernetes",
+                                        "kubernetes.cluster",
+                                        "kubernetes.daemonSet",
+                                        "kubernetes.deployment",
+                                        "kubernetes.job",
+                                        "kubernetes.namespace",
+                                        "kubernetes.node",
+                                        "kubernetes.pod",
+                                        "kubernetes.replicaSet",
+                                        "kubernetes.service",
+                                        "kubernetes.statefulSet",
+                                        "kubernetes.resourcequota",
+                                        "kubernetes.hpa",
+                                        "link",
+                                        "mesos",
+                                        "host.net",
+                                        "host.process",
+                                        "prometheus",
+                                        "swarm",
+                                        "prombeacon"
+                                    ],
+                                    "scopes": [],
+                                    "timeAggregations": [
+                                        "concat",
+                                        "distinct",
+                                        "count"
+                                    ],
+                                    "groupAggregations": [
+                                        "concat",
+                                        "distinct",
+                                        "count"
+                                    ],
+                                    "aggregationForGroup": "none",
+                                    "hidden": false,
+                                    "experimental": false,
+                                    "deferred": false,
+                                    "identity": false,
+                                    "canMonitor": false,
+                                    "canGroupBy": false,
+                                    "canFilter": true,
+                                    "generatedFrom": "com.draios.model.metrics.custom.CustomMetric$Tag",
+                                    "publicId": "deploy",
+                                    "segment": false,
+                                    "heuristic": false,
+                                    "documentType": "metric",
+                                    "documentTimestamp": 1672769478727
+                                },
+                                "displayName": null,
+                                "sorting": null
+                            }
+                        ],
+                        "limit": 10,
+                        "direction": "desc"
+                    }
+                }
+            ],
+            "applyScopeToAll": false,
+            "applySegmentationToAll": false,
+            "legendConfiguration": {
+                "enabled": false,
+                "position": "bottom",
+                "layout": "table",
+                "showCurrent": true,
+                "width": null,
+                "height": null
+            },
+            "axesConfiguration": {
+                "bottom": {
+                    "enabled": true
+                },
+                "left": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "/s",
+                    "maxInputFormat": "/s",
+                    "scale": "linear"
+                },
+                "right": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                }
+            }
+        },
+        {
+            "id": 22,
+            "type": "advancedTimechart",
+            "name": "$Interval_sec\n",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "advancedQueries": [
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_begin{cluster_name =~ $cluster_name, environment  =~ $env, requestor  =~ $requestor}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "Begin",
+                        "type": "stackedBar"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                },
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_success{$__scope}[$__interval]))/$__interval_sec",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "Success",
+                        "type": "stackedBar"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                }
+            ],
+            "legendConfiguration": {
+                "enabled": false,
+                "position": "bottom",
+                "layout": "inline",
+                "showCurrent": true,
+                "width": null,
+                "height": null
+            },
+            "axesConfiguration": {
+                "bottom": {
+                    "enabled": true
+                },
+                "left": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                },
+                "right": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                }
+            }
+        },
+        {
+            "id": 23,
+            "type": "text",
+            "name": "Lazy loading",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Lazy loading\n\n- Lazy loading greatly reduces the initial page loading time by only loading panels once they become visible on screen.\n\n**More Info -**\nhttps://docs.sysdig.com/en/docs/release-notes/saas-sysdig-monitor-release-notes/#lazy-loading-of-dashboard-panels",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 24,
+            "type": "text",
+            "name": "Confirm Navigation",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Confirm Navigation\n\n- If user hits \u201cEsc\u201d key while editing the dashboard panel, Dashboard panel used to come out of the edit mode and users lost all their changes\n- Now, Sysdig will pop up a confirmation message if there are unsaved changes and User is trying to come out of the edit mode\n",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 25,
+            "type": "text",
+            "name": "Dynamic Links in Table Panel",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Dynamic Links in Table Panel\n\n- The PromQL panel supports the configuration of dynamic links. \n- You can generate an external or internal URL using the label values returned by the PromQL query\n- You can have multiple dynamic links on one table panel\n\n- **More Info -** \nhttps://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/visualisation-types/table/#using-links\n",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 26,
+            "type": "advancedTable",
+            "name": "Dynamic links in Table Panel\n",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": [
+                {
+                    "type": "url",
+                    "title": "Show cluster",
+                    "url": "https://example.com/?query={{kube_cluster_name}}"
+                },
+                {
+                    "type": "url",
+                    "title": "Show namespace",
+                    "url": "https://example.com/?query={{kube_namespace_name}}"
+                }
+            ],
+            "advancedQueries": [
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_begin{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "Begin",
+                        "timeSeriesDisplayNameTemplate": "Begin",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "1",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                },
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_success{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "Success",
+                        "timeSeriesDisplayNameTemplate": "success",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "1",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                },
+                {
+                    "query": "sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_begin{environment=\"prd\",requestor=\"ads-brand\"}[$__interval])) - sum(increase(mz_cqs_v2_creative_grpc_handler_quality_request_success{environment=\"prd\",requestor=\"ads-brand\"}[$__interval]))",
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "Beging - Success",
+                        "timeSeriesDisplayNameTemplate": "Begin",
+                        "type": "stackedArea"
+                    },
+                    "format": {
+                        "unit": "number",
+                        "inputFormat": "1",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "type": "text",
+            "name": "Dashboard Manager",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Dashboard Manager\nDashboard Manager acts as the central repository for all your dashboards. You can use the Dashboard Manager for the following:\n\n- View all the dashboards that you have created, marked as favorite, and that your teams have shared with you.\n- Access the list of Dashboards from the Library available to you.\n- Create and Manage existing Dashboards.\n- Perform bulk operations on Dashboards\n\n- **More Info -** \nhttps://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/dashboard-manager/\n\n",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 28,
+            "type": "text",
+            "name": "Translate Form-Query to PromQL",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Translate Form-Query to PromQL\n\n- With a single click, you can translate form query to PromQL, and build PromQL-based dashboards in no time\n- Available in Timechart, number & Toplist\n\n- **More Info -** \nhttps://docs.sysdig.com/en/docs/release-notes/saas-sysdig-monitor-release-notes/#translate-form-query-to-promql\n\n\n",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 29,
+            "type": "text",
+            "name": "Enhanced Label Selector",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Enhanced Label Selector\nThe label selector in Dashboards and Metrics Explorer has been enriched with \n- Preview of label values\n- Label documentation (Only for K8s Labels enriched by our Sysdig Agent)\n- Suggested labels ",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 30,
+            "type": "basicTimechart",
+            "name": "Enhanced Label Selector\n",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "basicQueries": [
+                {
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "",
+                        "type": "lines"
+                    },
+                    "format": {
+                        "unit": "numberRate",
+                        "inputFormat": "/s",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "scope": {
+                        "expressions": [
+                            {
+                                "operand": "environment",
+                                "operator": "in",
+                                "displayName": "",
+                                "value": [
+                                    "prd"
+                                ],
+                                "descriptor": {
+                                    "documentId": "environment",
+                                    "id": "environment",
+                                    "metricType": "tag",
+                                    "type": "string",
+                                    "scale": 0.0,
+                                    "name": "environment",
+                                    "description": "environment",
+                                    "namespaces": [
+                                        "cloudProvider",
+                                        "host.container",
+                                        "ecs",
+                                        "host.fs",
+                                        "host.file",
+                                        "host",
+                                        "kubernetes",
+                                        "kubernetes.cluster",
+                                        "kubernetes.daemonSet",
+                                        "kubernetes.deployment",
+                                        "kubernetes.job",
+                                        "kubernetes.namespace",
+                                        "kubernetes.node",
+                                        "kubernetes.pod",
+                                        "kubernetes.replicaSet",
+                                        "kubernetes.service",
+                                        "kubernetes.statefulSet",
+                                        "kubernetes.resourcequota",
+                                        "kubernetes.hpa",
+                                        "link",
+                                        "mesos",
+                                        "host.net",
+                                        "host.process",
+                                        "prometheus",
+                                        "swarm",
+                                        "prombeacon"
+                                    ],
+                                    "scopes": [],
+                                    "timeAggregations": [
+                                        "concat",
+                                        "distinct",
+                                        "count"
+                                    ],
+                                    "groupAggregations": [
+                                        "concat",
+                                        "distinct",
+                                        "count"
+                                    ],
+                                    "aggregationForGroup": "none",
+                                    "hidden": false,
+                                    "experimental": false,
+                                    "deferred": false,
+                                    "identity": false,
+                                    "canMonitor": false,
+                                    "canGroupBy": false,
+                                    "canFilter": true,
+                                    "generatedFrom": "com.draios.model.metrics.custom.CustomMetric$Tag",
+                                    "publicId": "environment",
+                                    "segment": false,
+                                    "heuristic": false,
+                                    "documentType": "metric",
+                                    "documentTimestamp": 1672769478728
+                                },
+                                "variable": false,
+                                "isVariable": false
+                            }
+                        ],
+                        "extendsDashboardScope": true
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    },
+                    "metrics": [
+                        {
+                            "id": "ads_brand_rtb_http_request_total",
+                            "timeAggregation": "timeAvg",
+                            "groupAggregation": "sum",
+                            "descriptor": {
+                                "documentId": "prombeacon.ads_brand_rtb_http_request_total",
+                                "id": "ads_brand_rtb_http_request_total",
+                                "metricType": "counter",
+                                "counterType": "delta",
+                                "type": "number",
+                                "scale": 1.0,
+                                "name": "ads_brand_rtb_http_request_total",
+                                "description": "",
+                                "category": "prometheus_non_compliant",
+                                "namespaces": [
+                                    "prombeacon"
+                                ],
+                                "scopes": [],
+                                "timeAggregations": [
+                                    "timeAvg",
+                                    "avg",
+                                    "sum",
+                                    "min",
+                                    "max",
+                                    "rateOfChange"
+                                ],
+                                "groupAggregations": [
+                                    "sum",
+                                    "avg",
+                                    "min",
+                                    "max"
+                                ],
+                                "aggregationForGroup": "avg",
+                                "lastSeen": 1672735793000,
+                                "hidden": false,
+                                "experimental": false,
+                                "deferred": false,
+                                "identity": false,
+                                "canMonitor": false,
+                                "canGroupBy": false,
+                                "canFilter": false,
+                                "generatedFrom": "com.draios.model.metrics.custom.GenericMeerkatMetric",
+                                "publicId": "ads_brand_rtb_http_request_total",
+                                "legacyId": "ads_brand_rtb_http_request_total",
+                                "segment": false,
+                                "heuristic": false,
+                                "documentType": "metric",
+                                "documentTimestamp": 1672769478728
+                            },
+                            "sorting": null
+                        }
+                    ],
+                    "displayedValue": null,
+                    "segmentation": {
+                        "labels": [
+                            {
+                                "id": "deploy",
+                                "descriptor": {
+                                    "documentId": "deploy",
+                                    "id": "deploy",
+                                    "metricType": "tag",
+                                    "type": "string",
+                                    "scale": 0.0,
+                                    "name": "deploy",
+                                    "description": "deploy",
+                                    "namespaces": [
+                                        "cloudProvider",
+                                        "host.container",
+                                        "ecs",
+                                        "host.fs",
+                                        "host.file",
+                                        "host",
+                                        "kubernetes",
+                                        "kubernetes.cluster",
+                                        "kubernetes.daemonSet",
+                                        "kubernetes.deployment",
+                                        "kubernetes.job",
+                                        "kubernetes.namespace",
+                                        "kubernetes.node",
+                                        "kubernetes.pod",
+                                        "kubernetes.replicaSet",
+                                        "kubernetes.service",
+                                        "kubernetes.statefulSet",
+                                        "kubernetes.resourcequota",
+                                        "kubernetes.hpa",
+                                        "link",
+                                        "mesos",
+                                        "host.net",
+                                        "host.process",
+                                        "prometheus",
+                                        "swarm",
+                                        "prombeacon"
+                                    ],
+                                    "scopes": [],
+                                    "timeAggregations": [
+                                        "concat",
+                                        "distinct",
+                                        "count"
+                                    ],
+                                    "groupAggregations": [
+                                        "concat",
+                                        "distinct",
+                                        "count"
+                                    ],
+                                    "aggregationForGroup": "none",
+                                    "hidden": false,
+                                    "experimental": false,
+                                    "deferred": false,
+                                    "identity": false,
+                                    "canMonitor": false,
+                                    "canGroupBy": false,
+                                    "canFilter": true,
+                                    "generatedFrom": "com.draios.model.metrics.custom.CustomMetric$Tag",
+                                    "publicId": "deploy",
+                                    "segment": false,
+                                    "heuristic": false,
+                                    "documentType": "metric",
+                                    "documentTimestamp": 1672769478728
+                                },
+                                "displayName": null,
+                                "sorting": null
+                            }
+                        ],
+                        "limit": 10,
+                        "direction": "desc"
+                    }
+                },
+                {
+                    "enabled": true,
+                    "displayInfo": {
+                        "displayName": "",
+                        "timeSeriesDisplayNameTemplate": "",
+                        "type": "lines"
+                    },
+                    "format": {
+                        "unit": "%",
+                        "inputFormat": "0-100",
+                        "displayFormat": "auto",
+                        "decimals": null,
+                        "yAxis": "auto",
+                        "nullValueDisplayMode": "nullGap",
+                        "minInterval": null
+                    },
+                    "scope": {
+                        "expressions": [],
+                        "extendsDashboardScope": true
+                    },
+                    "compareTo": {
+                        "enabled": false,
+                        "delta": 1,
+                        "timeFormat": "day"
+                    },
+                    "metrics": [
+                        {
+                            "id": "sysdig_container_cpu_used_percent",
+                            "timeAggregation": "avg",
+                            "groupAggregation": "avg",
+                            "descriptor": null,
+                            "sorting": null
+                        }
+                    ],
+                    "displayedValue": null,
+                    "segmentation": {
+                        "labels": [],
+                        "limit": 10,
+                        "direction": "desc"
+                    }
+                }
+            ],
+            "applyScopeToAll": false,
+            "applySegmentationToAll": false,
+            "legendConfiguration": {
+                "enabled": false,
+                "position": "bottom",
+                "layout": "table",
+                "showCurrent": true,
+                "width": null,
+                "height": null
+            },
+            "axesConfiguration": {
+                "bottom": {
+                    "enabled": true
+                },
+                "left": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "/s",
+                    "maxInputFormat": "/s",
+                    "scale": "linear"
+                },
+                "right": {
+                    "enabled": true,
+                    "displayName": null,
+                    "unit": "auto",
+                    "displayFormat": "auto",
+                    "decimals": null,
+                    "minValue": 0.0,
+                    "maxValue": null,
+                    "minInputFormat": "1",
+                    "maxInputFormat": "1",
+                    "scale": "linear"
+                }
+            }
+        },
+        {
+            "id": 31,
+            "type": "text",
+            "name": "New PromQL variables",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### New PromQL variables ($__scope, $__interval_sec, $__range_sec)",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 32,
+            "type": "text",
+            "name": "Dashboard",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Dashboard\n",
+            "transparentBackground": true,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 33,
+            "type": "text",
+            "name": "Alert",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Alert\n",
+            "transparentBackground": true,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 34,
+            "type": "text",
+            "name": "Enhanced Alert Editor",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Enhanced Alert Editor\n- Sysdig introduces a new Alert Editor with an improved user experience thanks to a redesigned look and feel.\n- We\u2019ve also added the ability to link a dashboard and a runbook to the alert definition to expedite troubleshooting.\n\n- **More Info -** https://docs.sysdig.com/en/docs/release-notes/saas-sysdig-monitor-release-notes/#enhanced-alerts-editor\n- https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/configure-alerts/\n",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 35,
+            "type": "text",
+            "name": "Alert Group as Dropdown",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Alert Group as Dropdown\n- Allows users to select group name instead of typing.\n- Only for Metric Alerts for now. Coming soon for PromQL Alerts\n- **More Info -** https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/configure-alerts/\n",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        },
+        {
+            "id": 36,
+            "type": "text",
+            "name": "Configurable Slack Notification Sections",
+            "description": "",
+            "nullValueDisplayText": null,
+            "links": null,
+            "markdownSource": "### Configurable Slack Notification Sections\n\n- You can customize the sections that will be included in the messages sent to each configured Slack channel\n- Configurable per Channel (not per Alert)\n- If you need different customization for the same Slack channel, create two different Slack channels.\n- **More Info -** https://docs.sysdig.com/en/docs/administration/administration-settings/notifications-management/set-up-notification-channels/slack-notifications/#customize-notifications\n\n",
+            "transparentBackground": false,
+            "panelTitleVisible": false,
+            "textAutosized": false
+        }
+    ],
+    "scopeExpressionList": [
+        {
+            "operand": "cluster_name",
+            "operator": "in",
+            "displayName": "cluster_name",
+            "value": [],
+            "descriptor": {
+                "documentId": "cluster_name",
+                "id": "cluster_name",
+                "metricType": "tag",
+                "type": "string",
+                "scale": 0.0,
+                "name": "cluster_name",
+                "description": "cluster_name",
+                "namespaces": [
+                    "cloudProvider",
+                    "host.container",
+                    "ecs",
+                    "host.fs",
+                    "host.file",
+                    "host",
+                    "kubernetes",
+                    "kubernetes.cluster",
+                    "kubernetes.daemonSet",
+                    "kubernetes.deployment",
+                    "kubernetes.job",
+                    "kubernetes.namespace",
+                    "kubernetes.node",
+                    "kubernetes.pod",
+                    "kubernetes.replicaSet",
+                    "kubernetes.service",
+                    "kubernetes.statefulSet",
+                    "kubernetes.resourcequota",
+                    "kubernetes.hpa",
+                    "link",
+                    "mesos",
+                    "host.net",
+                    "host.process",
+                    "prometheus",
+                    "swarm",
+                    "prombeacon"
+                ],
+                "scopes": [],
+                "timeAggregations": [
+                    "concat",
+                    "distinct",
+                    "count"
+                ],
+                "groupAggregations": [
+                    "concat",
+                    "distinct",
+                    "count"
+                ],
+                "aggregationForGroup": "none",
+                "hidden": false,
+                "experimental": false,
+                "deferred": false,
+                "identity": false,
+                "canMonitor": false,
+                "canGroupBy": false,
+                "canFilter": true,
+                "generatedFrom": "com.draios.model.metrics.custom.CustomMetric$Tag",
+                "publicId": "cluster_name",
+                "segment": false,
+                "heuristic": false,
+                "documentType": "metric",
+                "documentTimestamp": 1672769478728
+            },
+            "variable": true,
+            "isVariable": true
+        },
+        {
+            "operand": "environment",
+            "operator": "in",
+            "displayName": "env",
+            "value": [],
+            "descriptor": {
+                "documentId": "environment",
+                "id": "environment",
+                "metricType": "tag",
+                "type": "string",
+                "scale": 0.0,
+                "name": "environment",
+                "description": "environment",
+                "namespaces": [
+                    "cloudProvider",
+                    "host.container",
+                    "ecs",
+                    "host.fs",
+                    "host.file",
+                    "host",
+                    "kubernetes",
+                    "kubernetes.cluster",
+                    "kubernetes.daemonSet",
+                    "kubernetes.deployment",
+                    "kubernetes.job",
+                    "kubernetes.namespace",
+                    "kubernetes.node",
+                    "kubernetes.pod",
+                    "kubernetes.replicaSet",
+                    "kubernetes.service",
+                    "kubernetes.statefulSet",
+                    "kubernetes.resourcequota",
+                    "kubernetes.hpa",
+                    "link",
+                    "mesos",
+                    "host.net",
+                    "host.process",
+                    "prometheus",
+                    "swarm",
+                    "prombeacon"
+                ],
+                "scopes": [],
+                "timeAggregations": [
+                    "concat",
+                    "distinct",
+                    "count"
+                ],
+                "groupAggregations": [
+                    "concat",
+                    "distinct",
+                    "count"
+                ],
+                "aggregationForGroup": "none",
+                "hidden": false,
+                "experimental": false,
+                "deferred": false,
+                "identity": false,
+                "canMonitor": false,
+                "canGroupBy": false,
+                "canFilter": true,
+                "generatedFrom": "com.draios.model.metrics.custom.CustomMetric$Tag",
+                "publicId": "environment",
+                "segment": false,
+                "heuristic": false,
+                "documentType": "metric",
+                "documentTimestamp": 1672769478728
+            },
+            "variable": true,
+            "isVariable": true
+        },
+        {
+            "operand": "requestor",
+            "operator": "in",
+            "displayName": "requestor",
+            "value": [],
+            "descriptor": {
+                "documentId": "requestor",
+                "id": "requestor",
+                "metricType": "tag",
+                "type": "string",
+                "scale": 0.0,
+                "name": "requestor",
+                "description": "requestor",
+                "namespaces": [
+                    "cloudProvider",
+                    "host.container",
+                    "ecs",
+                    "host.fs",
+                    "host.file",
+                    "host",
+                    "kubernetes",
+                    "kubernetes.cluster",
+                    "kubernetes.daemonSet",
+                    "kubernetes.deployment",
+                    "kubernetes.job",
+                    "kubernetes.namespace",
+                    "kubernetes.node",
+                    "kubernetes.pod",
+                    "kubernetes.replicaSet",
+                    "kubernetes.service",
+                    "kubernetes.statefulSet",
+                    "kubernetes.resourcequota",
+                    "kubernetes.hpa",
+                    "link",
+                    "mesos",
+                    "host.net",
+                    "host.process",
+                    "prometheus",
+                    "swarm",
+                    "prombeacon"
+                ],
+                "scopes": [],
+                "timeAggregations": [
+                    "concat",
+                    "distinct",
+                    "count"
+                ],
+                "groupAggregations": [
+                    "concat",
+                    "distinct",
+                    "count"
+                ],
+                "aggregationForGroup": "none",
+                "hidden": false,
+                "experimental": false,
+                "deferred": false,
+                "identity": false,
+                "canMonitor": false,
+                "canGroupBy": false,
+                "canFilter": true,
+                "generatedFrom": "com.draios.model.metrics.custom.CustomMetric$Tag",
+                "publicId": "requestor",
+                "segment": false,
+                "heuristic": false,
+                "documentType": "metric",
+                "documentTimestamp": 1672769478728
+            },
+            "variable": true,
+            "isVariable": true
+        }
+    ],
+    "eventDisplaySettings": {
+        "enabled": false,
+        "queryParams": {
+            "severities": [],
+            "alertStatuses": [],
+            "categories": [],
+            "filter": "",
+            "teamScope": false
+        }
+    },
+    "shared": false,
+    "public": false,
+    "version": 208,
+    "createdOn": 1667939474996,
+    "modifiedOn": 1671134056209,
+    "description": "",
+    "layout": [
+        {
+            "panelId": 8,
+            "x": 0,
+            "y": 46,
+            "w": 13,
+            "h": 6
+        },
+        {
+            "panelId": 11,
+            "x": 0,
+            "y": 5,
+            "w": 8,
+            "h": 5
+        },
+        {
+            "panelId": 13,
+            "x": 0,
+            "y": 10,
+            "w": 24,
+            "h": 3
+        },
+        {
+            "panelId": 15,
+            "x": 0,
+            "y": 19,
+            "w": 24,
+            "h": 4
+        },
+        {
+            "panelId": 18,
+            "x": 0,
+            "y": 52,
+            "w": 11,
+            "h": 6
+        },
+        {
+            "panelId": 23,
+            "x": 0,
+            "y": 1,
+            "w": 24,
+            "h": 2
+        },
+        {
+            "panelId": 24,
+            "x": 0,
+            "y": 3,
+            "w": 24,
+            "h": 2
+        },
+        {
+            "panelId": 25,
+            "x": 0,
+            "y": 28,
+            "w": 8,
+            "h": 5
+        },
+        {
+            "panelId": 27,
+            "x": 0,
+            "y": 33,
+            "w": 24,
+            "h": 4
+        },
+        {
+            "panelId": 28,
+            "x": 0,
+            "y": 37,
+            "w": 8,
+            "h": 4
+        },
+        {
+            "panelId": 29,
+            "x": 0,
+            "y": 41,
+            "w": 8,
+            "h": 4
+        },
+        {
+            "panelId": 31,
+            "x": 0,
+            "y": 45,
+            "w": 24,
+            "h": 1
+        },
+        {
+            "panelId": 32,
+            "x": 11,
+            "y": 0,
+            "w": 8,
+            "h": 1
+        },
+        {
+            "panelId": 33,
+            "x": 11,
+            "y": 58,
+            "w": 8,
+            "h": 1
+        },
+        {
+            "panelId": 34,
+            "x": 0,
+            "y": 59,
+            "w": 24,
+            "h": 3
+        },
+        {
+            "panelId": 35,
+            "x": 0,
+            "y": 62,
+            "w": 24,
+            "h": 2
+        },
+        {
+            "panelId": 36,
+            "x": 0,
+            "y": 64,
+            "w": 24,
+            "h": 3
+        },
+        {
+            "panelId": 3,
+            "x": 6,
+            "y": 13,
+            "w": 6,
+            "h": 6
+        },
+        {
+            "panelId": 2,
+            "x": 0,
+            "y": 13,
+            "w": 6,
+            "h": 6
+        },
+        {
+            "panelId": 1,
+            "x": 0,
+            "y": 23,
+            "w": 12,
+            "h": 5
+        },
+        {
+            "panelId": 7,
+            "x": 12,
+            "y": 23,
+            "w": 12,
+            "h": 5
+        },
+        {
+            "panelId": 9,
+            "x": 13,
+            "y": 46,
+            "w": 11,
+            "h": 6
+        },
+        {
+            "panelId": 10,
+            "x": 8,
+            "y": 5,
+            "w": 16,
+            "h": 5
+        },
+        {
+            "panelId": 17,
+            "x": 18,
+            "y": 13,
+            "w": 6,
+            "h": 6
+        },
+        {
+            "panelId": 5,
+            "x": 12,
+            "y": 13,
+            "w": 6,
+            "h": 6
+        },
+        {
+            "panelId": 20,
+            "x": 8,
+            "y": 37,
+            "w": 16,
+            "h": 4
+        },
+        {
+            "panelId": 22,
+            "x": 11,
+            "y": 52,
+            "w": 13,
+            "h": 6
+        },
+        {
+            "panelId": 26,
+            "x": 8,
+            "y": 28,
+            "w": 16,
+            "h": 5
+        },
+        {
+            "panelId": 30,
+            "x": 8,
+            "y": 41,
+            "w": 16,
+            "h": 4
+        }
+    ],
+    "sharingSettings": [],
+    "publicNotation": false,
+    "publicToken": "28b597d0a72b4da0a7fd261644a534b4",
+    "favorite": true,
+    "schema": 3,
+    "username": "Tushar Kapadi (tushar.kapadi+unity@sysdig.com)",
+    "permissions": [
+        "dashboards.transfer",
+        "dashboards.delete",
+        "dashboards.read",
+        "dashboards.edit",
+        "dashboards.sharing"
+    ]
+}

@@ -1,0 +1,43 @@
+
+{
+    "operand": "<LABEL_WITH_DOT_IF_NOT_CUSTOM>",
+    "operator": "<OPERATOR>",
+    "displayName": "",
+    "value": "<LIST_OF_VALUES>",
+    "descriptor": {
+        "documentId": "<LABEL_WITH_DOT_IF_NOT_CUSTOM>",
+        "id": "<LABEL_WITH_DOT_IF_NOT_CUSTOM>",
+        "metricType": "tag",
+        "type": "string",
+        "scale": 0.0,
+        "name": "<LABEL_WITH_DOT_IF_NOT_CUSTOM>",
+        "description": "<LABEL_WITH_DOT_IF_NOT_CUSTOM>",
+        "scopes": [],
+        "timeAggregations": [
+            "concat",
+            "distinct",
+            "count"
+        ],
+        "groupAggregations": [
+            "concat",
+            "distinct",
+            "count"
+        ],
+        "aggregationForGroup": "none",
+        "hidden": false,
+        "experimental": false,
+        "deferred": false,
+        "identity": false,
+        "canMonitor": false,
+        "canGroupBy": true,
+        "canFilter": true,
+        "generatedFrom": "com.draios.model.metrics.custom.CustomMetric$Tag",
+        "publicId": "<LABEL_WITH_UNDERSCORE>",
+        "segment": false,
+        "heuristic": false,
+        "documentType": "metric",
+        "documentTimestamp": 1671773931924
+    },
+    "variable": false,
+    "isVariable": false
+}

@@ -1,0 +1,46 @@
+{
+    "id": "<ID>",
+    "type": "advancedTimechart",
+    "name": "<PANEL_NAME>",
+    "description": "<PANEL_DESC>",
+    "nullValueDisplayText": null,
+    "links": null,
+    "advancedQueries": "<LIST_OF_QUERIES>",
+    "legendConfiguration": {
+        "enabled": false,
+        "position": "bottom",
+        "layout": "table",
+        "showCurrent": true,
+        "width": null,
+        "height": null
+    },
+    "axesConfiguration": {
+        "bottom": {
+            "enabled": true
+        },
+        "left": {
+            "enabled": true,
+            "displayName": null,
+            "unit": "auto",
+            "displayFormat": "auto",
+            "decimals": null,
+            "minValue": 0.0,
+            "maxValue": null,
+            "minInputFormat": "0-100",
+            "maxInputFormat": "0-100",
+            "scale": "linear"
+        },
+        "right": {
+            "enabled": true,
+            "displayName": null,
+            "unit": "auto",
+            "displayFormat": "auto",
+            "decimals": null,
+            "minValue": 0.0,
+            "maxValue": null,
+            "minInputFormat": "1",
+            "maxInputFormat": "1",
+            "scale": "linear"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "query": "<QUERY>",
+    "enabled": true,
+    "displayInfo": {
+        "displayName": "<DISPLAY_NAME>",
+        "timeSeriesDisplayNameTemplate": "<TS_DISPLAY_NAME>",
+        "type": "<TYPE>"
+    },
+    "format": {
+        "unit": "number",
+        "inputFormat": "1",
+        "displayFormat": "auto",
+        "decimals": null,
+        "yAxis": "auto",
+        "nullValueDisplayMode": "nullGap",
+        "minInterval": null
+    },
+    "compareTo": {
+        "enabled": false,
+        "delta": 1,
+        "timeFormat": "day"
+    }
+}

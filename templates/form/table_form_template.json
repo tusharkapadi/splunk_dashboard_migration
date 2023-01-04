@@ -1,0 +1,9 @@
+{
+    "id": "<ID>",
+    "type": "basicTable",
+    "name": "<NAME>",
+    "description": "",
+    "nullValueDisplayText": null,
+    "links": null,
+    "basicQueries": "<LIST_OF_QUERIES>"
+}

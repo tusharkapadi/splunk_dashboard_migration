@@ -1,0 +1,9 @@
+{
+    "id": "<ID>",
+    "type": "advancedTable",
+    "name": "<NAME>",
+    "description": "",
+    "nullValueDisplayText": null,
+    "links": null,
+    "advancedQueries": "<LIST_OF_QUERIES>"
+}

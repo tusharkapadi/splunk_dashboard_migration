@@ -1,0 +1,10 @@
+{
+    "dashboard":
+    {
+        "name": "<DASHBOARD_NAME>",
+        "panels": "<LIST_OF_PANELS>",
+        "layout": "<LIST_OF_LAYOUTS>",
+        "schema": 3
+    }
+}
+

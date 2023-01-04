@@ -1,0 +1,33 @@
+{
+    "enabled": true,
+    "displayInfo": {
+        "displayName": "<DISPLAY_NAME>",
+        "timeSeriesDisplayNameTemplate": "<TS_DISPLAY_NAME>",
+        "type": "<TYPE>"
+    },
+    "format": {
+        "unit": "number",
+        "inputFormat": "1",
+        "displayFormat": "auto",
+        "decimals": null,
+        "yAxis": "auto",
+        "nullValueDisplayMode": "nullGap",
+        "minInterval": null
+    },
+    "scope": {
+        "expressions": "<LIST_OF_SCOPES>",
+        "extendsDashboardScope": true
+    },
+    "compareTo": {
+        "enabled": false,
+        "delta": 1,
+        "timeFormat": "day"
+    },
+    "metrics": "<LIST_OF_METRICS>",
+    "displayedValue": null,
+    "segmentation": {
+        "labels": "<LIST_OF_SEGMENTATIONS>",
+        "limit": 10,
+        "direction": "desc"
+    }
+}

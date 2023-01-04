@@ -1,0 +1,17 @@
+{
+    "id": "<ID>",
+    "type": "advancedNumber",
+    "name": "<NAME>",
+    "description": "<DESC>",
+    "nullValueDisplayText": null,
+    "links": null,
+    "advancedQueries": "<LIST_OF_QUERIES>",
+    "numberThresholds": {
+        "values": [],
+        "base": {
+            "severity": "none",
+            "displayText": ""
+        },
+        "useDefaults": null
+    }
+}
